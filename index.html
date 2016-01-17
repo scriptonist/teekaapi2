@@ -13,23 +13,11 @@
     <!--Material-Cards-->
     <link rel="stylesheet" href="material-cards/dist/material-cards.css">
     <link rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="main.css">
 
-    <style>
-      .buttonsTweak{
-      	margin-right:2em;
-
-      }
-      .progress{
-      	margin-top:1em;
-
-      }
-      .contact{
-      	font-size: 4em;
-      }
-    </style>
 </head>
 
-<body>
+<body >
     <div class="navbar-fixed">
         <nav>
             <div class="nav-wrapper">
@@ -52,7 +40,7 @@
     </div>
     <div id="home" class="container scrollspy" style="margin-top:1em;">
         <div class="section ">
-            <div class="row">
+            <div class="row fade-up">
                 <div class="col s12">
                     <img src="images/teekaapi-main.jpg" height="1151" width="2048" alt="Teekaapi" class="responsive-img  z-depth-3">
                 </div>
@@ -76,10 +64,10 @@
 				</div>
 				<div class="col s12 m4">
 				<div class="card-panel z-depth-3" >
-				<a class="btn-floating btn tooltipped waves-effect waves-light red buttonsTweak" data-position="top" data-delay="50" data-tooltip="play"><i class="material-icons">play_arrow</i></a>
-				<a class="btn-floating btn tooltipped waves-effect waves-light red buttonsTweak" data-position="top" data-delay="50" data-tooltip="pause"><i class="material-icons">pause</i></a>
+				<a id="malarePlayButton" class="btn-floating btn tooltipped waves-effect waves-light red buttonsTweak" data-position="top" data-delay="50" data-tooltip="play"><i class="material-icons">play_arrow</i></a>
+				<a id="malarePauseButton" class="btn-floating btn tooltipped waves-effect waves-light red buttonsTweak" data-position="top" data-delay="50" data-tooltip="pause"><i class="material-icons">pause</i></a>
 				<br>
-				<div class="progress ">
+				<div id="malareProgress" class="progress ">
 				      <div class="determinate red" style="width: 70%"></div>
 				  </div>
 				  </div>
@@ -102,10 +90,10 @@
 		</div>
 		<div class="col s12 m4">
 			<div class="card-panel">
-				<a class="btn-floating btn tooltipped waves-effect waves-light red buttonsTweak" data-position="top" data-delay="50" data-tooltip="play"><i class="material-icons">play_arrow</i></a>
-				<a class="btn-floating btn tooltipped waves-effect waves-light red buttonsTweak" data-position="top" data-delay="50" data-tooltip="pause"><i class="material-icons">pause</i></a>
+				<a id="holdmedownPlayButton" class="btn-floating btn tooltipped waves-effect waves-light red buttonsTweak" data-position="top" data-delay="50" data-tooltip="play"><i class="material-icons">play_arrow</i></a>
+				<a id="holdmedownPauseButton" class="btn-floating btn tooltipped waves-effect waves-light red buttonsTweak" data-position="top" data-delay="50" data-tooltip="pause"><i class="material-icons">pause</i></a>
 				<br>
-				<div class="progress">
+				<div id="holdmedownProgress" class="progress">
 				      <div class="determinate" style="width: 70%"></div>
 				  </div>
 				 
@@ -130,13 +118,26 @@
 		</div>
 		<div class="col s12 m4">
 			<div class="card-panel">
-				<a class="btn-floating btn tooltipped waves-effect waves-light red buttonsTweak" data-position="top" data-delay="50" data-tooltip="play"><i class="material-icons">play_arrow</i></a>
-				<a class="btn-floating btn tooltipped waves-effect waves-light red buttonsTweak" data-position="top" data-delay="50" data-tooltip="pause"><i class="material-icons">pause</i></a>
+			<div class="row">
+			<div class="col s10 m10 offset-m2 offset-s2">
+				<a id="churilmudiyilPlayButton" class="btn-floating btn tooltipped waves-effect waves-light red buttonsTweak" data-position="top" data-delay="50" data-tooltip="play"><i class="material-icons">play_arrow</i></a>
+				<a id="churilmudiyilPauseButton" class="btn-floating btn tooltipped waves-effect waves-light red buttonsTweak" data-position="top" data-delay="50" data-tooltip="pause"><i class="material-icons">pause</i></a>
 				<br>
-				<div class="progress">
-				      <div class="determinate" style="width: 70%"></div>
+				</div>
+			</div>
+				<div class="row">
+				<div class="col s2 m2" style="margin-top:0.4em">
+				<small id="startTime"></small>
+				</div>
+				<div class="col s8 m8">
+				<div id="churilmudiProgress" class="progress">
+				      <div class="determinate" style="width: 0%"></div>
 				  </div>
-				
+				  </div>
+				  <div class="col s2 m2" style="margin-top:0.4em">
+				  <small id="endTime"></small>
+				</div>
+				</div>
 				 </div>
 				  <br>
 				<a class="waves-effect waves-light btn"><i class="material-icons right buttonsTweak">cloud</i>Download</a>
